@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>One Week One Thing 一周一物｜每周做一件小而完整的东西</title>
+  <meta name="description" content="One Week One Thing（一周一物）是一个每周发布一件小而完整作品的个人创作实践。现有作品：网页盲打练习应用「键盘旋律 Key Melody」与 AI 原生开发技术笔记。公开构建，每周更新。" />
+  <link rel="canonical" href="https://oneweekonething.com/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f6f3" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#191815" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="llms" type="text/markdown" href="/llms.txt" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="One Week One Thing 一周一物" />
+  <meta property="og:title" content="One Week One Thing 一周一物｜每周做一件小而完整的东西" />
+  <meta property="og:description" content="每周发布一件小而完整作品的个人创作实践：网页应用「键盘旋律 Key Melody」、AI 原生开发技术笔记，以及更多每周更新的小东西。" />
+  <meta property="og:url" content="https://oneweekonething.com/" />
+  <meta property="og:image" content="https://oneweekonething.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="One Week One Thing 一周一物 · 每周做一件小而完整的东西" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="One Week One Thing 一周一物｜每周做一件小而完整的东西" />
+  <meta name="twitter:description" content="每周发布一件小而完整作品的个人创作实践：键盘旋律 Key Melody、AI 原生开发技术笔记。" />
+  <meta name="twitter:image" content="https://oneweekonething.com/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://oneweekonething.com/#website",
+        "url": "https://oneweekonething.com/",
+        "name": "One Week One Thing 一周一物",
+        "alternateName": "一周一物",
+        "inLanguage": "zh-CN",
+        "description": "每周发布一件小而完整作品的个人创作实践。",
+        "publisher": { "@id": "https://oneweekonething.com/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://oneweekonething.com/#org",
+        "name": "One Week One Thing",
+        "alternateName": "一周一物",
+        "url": "https://oneweekonething.com/",
+        "email": "oneweekonething@gmail.com",
+        "logo": "https://oneweekonething.com/favicon.svg",
+        "sameAs": [
+          "https://key.oneweekonething.com/",
+          "https://notes.oneweekonething.com/"
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://oneweekonething.com/#key-melody",
+        "name": "键盘旋律 Key Melody",
+        "alternateName": "Key Melody",
+        "url": "https://key.oneweekonething.com/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires modern browser",
+        "inLanguage": "zh-CN",
+        "description": "用弹琴的方式练盲打的网页应用：把指法拆解成小关卡，支持 learn（学习）与 play（闯关）模式，打开浏览器即可使用，无需安装。",
+        "publisher": { "@id": "https://oneweekonething.com/#org" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://oneweekonething.com/#notes",
+        "name": "One Week One Thing Notes",
+        "alternateName": "一周一物技术笔记",
+        "url": "https://notes.oneweekonething.com/",
+        "inLanguage": "zh-CN",
+        "description": "AI 辅助开发与技术学习手册：AI 原生 SDLC、AGENTS.md 渐进式披露教程、FrontierAgent 源码学习等中文长文笔记，持续更新。",
+        "publisher": { "@id": "https://oneweekonething.com/#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://oneweekonething.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "One Week One Thing（一周一物）是什么？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "一个持续进行的个人创作实践：每周设计并发布一件小而完整的东西，并通过 oneweekonething.com 公开。内容以中文为主，覆盖网页应用与技术学习笔记两个方向。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "目前有哪些作品？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "两类：一是键盘旋律 Key Melody（key.oneweekonething.com），网页版盲打练习应用；二是 AI 技术笔记（notes.oneweekonething.com），收录 AI 原生 SDLC、AGENTS.md 教程、FrontierAgent 源码学习手册等。新作品每周更新。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "键盘旋律 Key Melody 是什么？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "一个用弹琴的方式练盲打的网页应用：把指法拆解成小关卡，支持 learn（学习）与 play（闯关）模式，打开浏览器即可使用，无需安装。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "技术笔记覆盖哪些主题？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI 原生 SDLC、AGENTS.md 渐进式披露教程、FrontierAgent 源码学习、文档工程等，均为中文长文，持续更新。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ===== Primitive Tokens ===== */
+    :root {
+      --indigo-100: #e9e8fb;
+      --indigo-300: #b9b7f3;
+      --indigo-500: #5b5bd6;
+      --indigo-600: #4a4ac2;
+      --indigo-700: #3c3ca3;
+
+      --gray-0: #ffffff;
+      --gray-50: #f7f6f3;
+      --gray-100: #efede8;
+      --gray-200: #e3e0d8;
+      --gray-300: #c9c5ba;
+      --gray-400: #a8a399;
+      --gray-500: #7d7970;
+      --gray-550: #6e6a61;
+      --gray-600: #5c5850;
+      --gray-700: #413e38;
+      --gray-800: #2a2823;
+      --gray-900: #191815;
+    }
+
+    /* ===== Semantic Tokens（Dark 主题仅做 Token 映射） ===== */
+    :root {
+      --surface-primary: var(--gray-50);
+      --surface-secondary: var(--gray-0);
+      --surface-sunken: var(--gray-100);
+
+        --text-primary: var(--gray-800);
+        --text-secondary: var(--gray-600);
+        --text-muted: var(--gray-550);
+        --text-link: var(--indigo-600);
+      --text-inverse: var(--gray-0);
+
+      --border-divider: var(--gray-200);
+      --border-strong: var(--gray-300);
+
+      --action-primary: var(--indigo-500);
+      --action-primary-hover: var(--indigo-600);
+      --action-primary-active: var(--indigo-700);
+      --action-primary-text: var(--gray-0);
+      --accent-soft: var(--indigo-100);
+
+      --focus-ring: 0 0 0 3px var(--indigo-300);
+
+      --radius-small: 6px;
+      --radius-medium: 10px;
+      --radius-large: 16px;
+
+      --motion-fast: 150ms;
+      --motion-normal: 240ms;
+      --ease-out: cubic-bezier(0.2, 0.7, 0.3, 1);
+
+      --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+
+      --text-xs: 12px;
+      --text-sm: 13px;
+      --text-md: 15px;
+      --text-lg: 18px;
+      --text-xl: 22px;
+      --text-display: 40px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --surface-primary: var(--gray-900);
+        --surface-secondary: var(--gray-800);
+        --surface-sunken: var(--gray-800);
+
+        --text-primary: var(--gray-100);
+        --text-secondary: var(--gray-300);
+        --text-muted: var(--gray-400);
+        --text-link: var(--indigo-300);
+
+        --border-divider: var(--gray-700);
+        --border-strong: var(--gray-600);
+
+        --accent-soft: var(--indigo-700);
+      }
+    }
+
+    /* ===== Base ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: var(--text-md);
+      line-height: 1.7;
+      color: var(--text-primary);
+      background: var(--surface-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding-inline: 24px;
+    }
+
+    a {
+      color: var(--text-link);
+      text-decoration: none;
+      border-radius: var(--radius-small);
+      transition: color var(--motion-fast) var(--ease-out);
+    }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    :focus-visible {
+      outline: none;
+      box-shadow: var(--focus-ring);
+    }
+
+    ::selection { background: var(--accent-soft); }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      margin: -1px; padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -64px;
+      left: 16px;
+      z-index: 10;
+      padding: 10px 16px;
+      background: var(--surface-secondary);
+      color: var(--text-link);
+      font-weight: 600;
+      border-radius: var(--radius-medium);
+      transition: top var(--motion-fast) var(--ease-out);
+    }
+    .skip-link:focus-visible {
+      top: 12px;
+      box-shadow: var(--focus-ring);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      border-bottom: 1px solid var(--border-divider);
+      background: var(--surface-primary);
+    }
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 64px;
+    }
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-primary);
+      font-weight: 700;
+      font-size: var(--text-lg);
+      letter-spacing: -0.01em;
+    }
+    .wordmark:hover { text-decoration: none; }
+    .wordmark .mark { flex: none; display: block; }
+    .site-nav { display: flex; gap: 8px; }
+    .site-nav a {
+      color: var(--text-secondary);
+      font-size: var(--text-md);
+      padding: 10px 12px;
+      transition: color var(--motion-fast) var(--ease-out);
+    }
+    .site-nav a:hover { color: var(--text-primary); text-decoration: none; }
+
+    /* ===== Hero ===== */
+    .hero { padding-block: 96px 80px; }
+    .hero .kicker {
+      margin: 0 0 16px;
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .hero h1 {
+      margin: 0 0 20px;
+      font-size: var(--text-display);
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      max-width: 22em;
+    }
+    .hero .lede {
+      margin: 0 0 32px;
+      font-size: var(--text-lg);
+      line-height: 1.8;
+      color: var(--text-secondary);
+      max-width: 36em;
+    }
+    .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 11px 20px;
+      font: inherit;
+      font-size: var(--text-md);
+      font-weight: 600;
+      border-radius: var(--radius-medium);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background-color var(--motion-fast) var(--ease-out),
+                  border-color var(--motion-fast) var(--ease-out),
+                  color var(--motion-fast) var(--ease-out);
+    }
+    .btn-primary {
+      background: var(--action-primary);
+      color: var(--action-primary-text);
+    }
+    .btn-primary:hover { background: var(--action-primary-hover); text-decoration: none; }
+    .btn-primary:active { background: var(--action-primary-active); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border-color: var(--border-strong);
+    }
+    .btn-secondary:hover { border-color: var(--text-muted); text-decoration: none; }
+    .btn-secondary:active { background: var(--surface-sunken); }
+    .btn .arrow { transition: transform var(--motion-fast) var(--ease-out); }
+    .btn:hover .arrow { transform: translateX(2px); }
+
+    /* ===== Sections ===== */
+    .section { padding-block: 48px; }
+    .section + .section { border-top: 1px solid var(--border-divider); }
+    .section > h2 {
+      margin: 0 0 8px;
+      font-size: var(--text-xl);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .section .section-intro {
+      margin: 0 0 32px;
+      color: var(--text-secondary);
+      max-width: 36em;
+    }
+
+    /* 产品列表：行式结构，不做卡片堆砌 */
+    .product-list { list-style: none; margin: 0; padding: 0; }
+    .product-row {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) 2fr auto;
+      align-items: baseline;
+      gap: 12px 32px;
+      padding-block: 24px;
+      border-top: 1px solid var(--border-divider);
+    }
+    .product-row:first-child { border-top: none; padding-top: 0; }
+    .product-name { margin: 0; font-size: var(--text-lg); font-weight: 700; }
+    .product-name .en {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-left: 8px;
+      letter-spacing: 0.02em;
+    }
+    .product-name a {
+      color: inherit;
+    }
+    .product-name a:hover { color: var(--text-link); }
+    .product-desc { margin: 0; color: var(--text-secondary); }
+    .product-desc .meta {
+      display: block;
+      margin-top: 6px;
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+    }
+    .product-link {
+      font-size: var(--text-md);
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 10px 0;
+    }
+    .product-link .arrow { display: inline-block; transition: transform var(--motion-fast) var(--ease-out); }
+    .product-link:hover .arrow { transform: translateX(2px); }
+    .product-row.upcoming .product-name,
+    .product-row.upcoming .product-desc { color: var(--text-muted); }
+
+    /* 理念 */
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin: 0;
+    }
+    .principle h3 {
+      margin: 0 0 8px;
+      font-size: var(--text-md);
+      font-weight: 700;
+    }
+    .principle h3 .index {
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-right: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+    .principle p { margin: 0; color: var(--text-secondary); }
+
+    /* FAQ：原生 details，键盘可用 */
+    .faq-list { max-width: 720px; }
+    .faq-list details {
+      border-top: 1px solid var(--border-divider);
+    }
+    .faq-list details:last-child { border-bottom: 1px solid var(--border-divider); }
+    .faq-list summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 4px;
+      min-height: 44px;
+      font-size: var(--text-md);
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      border-radius: var(--radius-small);
+      transition: color var(--motion-fast) var(--ease-out);
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: "";
+      flex: none;
+      width: 10px; height: 10px;
+      border-right: 2px solid var(--text-muted);
+      border-bottom: 2px solid var(--text-muted);
+      transform: rotate(45deg);
+      transition: transform var(--motion-normal) var(--ease-out);
+    }
+    .faq-list details[open] summary::after { transform: rotate(225deg); }
+    .faq-list summary:hover { color: var(--text-link); }
+    .faq-list .answer {
+      padding: 0 4px 20px;
+      color: var(--text-secondary);
+      max-width: 65ch;
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      margin-top: 48px;
+      border-top: 1px solid var(--border-divider);
+      background: var(--surface-secondary);
+    }
+    .site-footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px 24px;
+      padding-block: 32px;
+    }
+    .footer-tagline { margin: 0; font-size: var(--text-sm); color: var(--text-muted); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+    .footer-links a {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      padding: 8px 0;
+    }
+    .footer-links a:hover { color: var(--text-link); }
+    .site-footer .copyright {
+      flex-basis: 100%;
+      margin: 0;
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 800px) {
+      .product-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .principles { grid-template-columns: 1fr; gap: 24px; }
+      .hero { padding-block: 64px 56px; }
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 32px; }
+      .site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        min-height: 0;
+        padding-block: 10px 4px;
+      }
+      .wordmark { font-size: var(--text-md); white-space: nowrap; }
+      .site-nav { gap: 0; }
+      .site-nav a { padding: 10px 16px 10px 0; font-size: var(--text-sm); white-space: nowrap; }
+      .section { padding-block: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="wordmark" href="/" aria-label="One Week One Thing 一周一物 首页">
+        <svg class="mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#5b5bd6" />
+          <path d="M6 12h12" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" />
+        </svg>
+        One Week One Thing
+      </a>
+      <nav class="site-nav" aria-label="页面导航">
+        <a href="#products">产品</a>
+        <a href="#philosophy">理念</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <p class="kicker">One Week · One Thing</p>
+        <h1>一周，做好一件东西。</h1>
+        <p class="lede">
+          One Week One Thing（一周一物）是一个持续进行的个人创作实践：
+          每周专注设计并发布一件小而完整的东西——一个网页应用、一份技术手册，或任何值得存在的小工具。
+          所有作品都公开在 oneweekonething.com 的子域名上，直接打开即用。
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://key.oneweekonething.com/">
+            键盘旋律 · 开始练盲打<span class="arrow" aria-hidden="true"> →</span>
+          </a>
+          <a class="btn btn-secondary" href="https://notes.oneweekonething.com/">
+            阅读技术笔记<span class="arrow" aria-hidden="true"> ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <h2 id="products-title">已经做出的东西</h2>
+        <p class="section-intro">每一件都是独立可用的完整产品，托管在独立子域名上。</p>
+
+        <ul class="product-list">
+          <li class="product-row">
+            <h3 class="product-name">
+              <a href="https://key.oneweekonething.com/">键盘旋律<span class="en" lang="en">Key Melody</span></a>
+            </h3>
+            <p class="product-desc">
+              用弹琴的方式练盲打。把指法拆解成小关卡，支持 learn（学习）与 play（闯关）两种模式。
+              <span class="meta">网页应用 · 打开即用，无需安装 · key.oneweekonething.com</span>
+            </p>
+            <a class="product-link" href="https://key.oneweekonething.com/">开始练习<span class="arrow" aria-hidden="true"> →</span></a>
+          </li>
+
+          <li class="product-row">
+            <h3 class="product-name">
+              <a href="https://notes.oneweekonething.com/">技术笔记<span class="en" lang="en">Notes</span></a>
+            </h3>
+            <p class="product-desc">
+              AI 辅助开发与技术学习手册：AI 原生 SDLC、AGENTS.md 渐进式披露教程、FrontierAgent 源码学习等中文长文。
+              <span class="meta">学习手册 · 持续更新 · notes.oneweekonething.com</span>
+            </p>
+            <a class="product-link" href="https://notes.oneweekonething.com/">去阅读<span class="arrow" aria-hidden="true"> →</span></a>
+          </li>
+
+          <li class="product-row upcoming">
+            <h3 class="product-name">下一件东西</h3>
+            <p class="product-desc">每周更新中，发布后会出现在这里。</p>
+            <span class="product-link" aria-hidden="true">即将发布</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="philosophy" aria-labelledby="philosophy-title">
+      <div class="container">
+        <h2 id="philosophy-title">一周一物的做法</h2>
+        <p class="section-intro">三条约束，让「想做」变成「做完了」。</p>
+
+        <div class="principles">
+          <div class="principle">
+            <h3><span class="index" aria-hidden="true">01</span>小而完整</h3>
+            <p>宁可做一件七天能收尾的小东西，也不开一个永远做不完的大坑。每一件都以「可用、可访问、可交付」为完成标准。</p>
+          </div>
+          <div class="principle">
+            <h3><span class="index" aria-hidden="true">02</span>以周为节奏</h3>
+            <p>一周是足够想清楚、也足够做出来的周期。用固定的发布节奏约束范围，让交付成为习惯，而不是灵感。</p>
+          </div>
+          <div class="principle">
+            <h3><span class="index" aria-hidden="true">03</span>公开构建</h3>
+            <p>作品发布在公开子域名上，方法与踩坑沉淀为技术笔记。做东西的过程本身，也是一件可以分享的东西。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">常见问题</h2>
+        <p class="section-intro">关于 One Week One Thing 的简短问答。</p>
+
+        <div class="faq-list">
+          <details>
+            <summary>One Week One Thing（一周一物）是什么？</summary>
+            <p class="answer">一个持续进行的个人创作实践：每周设计并发布一件小而完整的东西，并通过 oneweekonething.com 公开。内容以中文为主，覆盖网页应用与技术学习笔记两个方向。</p>
+          </details>
+          <details>
+            <summary>目前有哪些作品？</summary>
+            <p class="answer">两类：一是键盘旋律 Key Melody（key.oneweekonething.com），网页版盲打练习应用；二是 AI 技术笔记（notes.oneweekonething.com），收录 AI 原生 SDLC、AGENTS.md 教程、FrontierAgent 源码学习手册等。新作品每周更新。</p>
+          </details>
+          <details>
+            <summary>键盘旋律 Key Melody 是什么？</summary>
+            <p class="answer">一个用弹琴的方式练盲打的网页应用：把指法拆解成小关卡，支持 learn（学习）与 play（闯关）模式，打开浏览器即可使用，无需安装。</p>
+          </details>
+          <details>
+            <summary>技术笔记覆盖哪些主题？</summary>
+            <p class="answer">AI 原生 SDLC、AGENTS.md 渐进式披露教程、FrontierAgent 源码学习、文档工程等，均为中文长文，持续更新。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-tagline">用一周，做一件东西。</p>
+      <nav class="footer-links" aria-label="作品链接">
+        <a href="https://key.oneweekonething.com/">键盘旋律 Key Melody</a>
+        <a href="https://notes.oneweekonething.com/">技术笔记 Notes</a>
+        <a href="mailto:oneweekonething@gmail.com">oneweekonething@gmail.com</a>
+      </nav>
+      <p class="copyright">© 2026 One Week One Thing · oneweekonething.com</p>
+    </div>
+  </footer>
+</body>
+</html>

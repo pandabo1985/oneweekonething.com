@@ -1,0 +1,21 @@
+# One Week One Thing（一周一物）
+
+> One Week One Thing（一周一物）是一个持续进行的个人创作实践：每周设计并发布一件小而完整的东西——网页应用、技术手册或小工具，并通过 oneweekonething.com 公开。内容以中文为主。
+
+One Week One Thing 是一个品牌与个人 IP，由主域名 oneweekonething.com 与若干子域名组成。所有作品均为独立可用的完整产品，免费、打开浏览器即用。品牌理念：小而完整、以周为节奏、公开构建。
+
+## 产品
+
+- [键盘旋律 Key Melody](https://key.oneweekonething.com/)：用弹琴的方式练盲打的网页应用。把指法拆解成小关卡，支持 learn（学习）与 play（闯关）模式，无需安装。
+- [技术笔记 Notes](https://notes.oneweekonething.com/)：AI 辅助开发与技术学习手册，含 AI 原生 SDLC、AGENTS.md 渐进式披露教程、FrontierAgent 源码学习等中文长文，持续更新。
+
+## 常见问题
+
+- One Week One Thing（一周一物）是什么？一个每周发布一件小而完整作品的个人创作实践，以 oneweekonething.com 为中心公开构建。
+- 目前有哪些作品？键盘旋律 Key Melody（盲打练习网页应用）与 AI 技术笔记（AI 原生开发学习手册）。新作品每周更新。
+
+## 补充信息
+
+- 语言：中文（zh-CN），品牌名同时使用英文 One Week One Thing 与中文「一周一物」。
+- 更新节奏：每周发布或更新一件作品。
+- 联系方式：oneweekonething@gmail.com
