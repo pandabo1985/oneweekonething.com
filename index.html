@@ -457,23 +457,72 @@
     }
     .principle p { margin: 0; color: var(--text-secondary); }
 
-    /* 名言：喜欢的两句话 */
+    /* 名言 */
     .mottos {
       display: grid;
-      gap: 28px;
-      max-width: 720px;
+      gap: 0;
+      max-width: 760px;
+      margin-top: 12px;
     }
+
     .motto {
+      position: relative;
       margin: 0;
-      padding: 2px 0 2px 24px;
-      border-left: 3px solid var(--indigo-300);
+      padding: 36px 0 36px 52px;
+      border-top: 1px solid var(--border-divider);
     }
+
+    .motto:last-child {
+      border-bottom: 1px solid var(--border-divider);
+    }
+
+    .motto::before {
+      content: "“";
+      position: absolute;
+      left: 0;
+      top: 21px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 52px;
+      line-height: 1;
+      font-weight: 400;
+
+      color: var(--indigo-300);
+    }
+
     .motto p {
       margin: 0;
-      font-size: var(--text-xl);
-      line-height: 1.6;
+      max-width: 26em;
+
+      font-size: 26px;
+      line-height: 1.55;
       font-weight: 600;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.018em;
+    }
+
+    /* 英文名言略微区别于中文 */
+    .motto p[lang="en"] {
+      max-width: 24em;
+      font-size: 24px;
+      line-height: 1.6;
+      letter-spacing: -0.015em;
+    }
+
+    @media (max-width: 640px) {
+      .motto {
+        padding: 28px 0 28px 40px;
+      }
+
+      .motto::before {
+        top: 20px;
+        font-size: 42px;
+      }
+
+      .motto p,
+      .motto p[lang="en"] {
+        font-size: 20px;
+        line-height: 1.6;
+      }
     }
 
     /* FAQ：原生 details，键盘可用 */
