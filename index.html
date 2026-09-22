@@ -457,6 +457,25 @@
     }
     .principle p { margin: 0; color: var(--text-secondary); }
 
+    /* 名言：喜欢的两句话 */
+    .mottos {
+      display: grid;
+      gap: 28px;
+      max-width: 720px;
+    }
+    .motto {
+      margin: 0;
+      padding: 2px 0 2px 24px;
+      border-left: 3px solid var(--indigo-300);
+    }
+    .motto p {
+      margin: 0;
+      font-size: var(--text-xl);
+      line-height: 1.6;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
     /* FAQ：原生 details，键盘可用 */
     .faq-list { max-width: 720px; }
     .faq-list details {
@@ -646,6 +665,20 @@
             <h3><span class="index" aria-hidden="true">03</span>反馈：及时校准</h3>
             <p>行动中尽早观察结果、收集使用体验或他人意见，发现偏差就及时调整做法、范围和优先级；一轮结束时再回看，把反馈带进下一轮。</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mottos" aria-labelledby="mottos-title">
+      <div class="container">
+        <h2 id="mottos-title">喜欢的名言</h2>
+        <div class="mottos">
+          <blockquote class="motto">
+            <p lang="zh-CN">悲观者永远正确，乐观者永远前行。</p>
+          </blockquote>
+          <blockquote class="motto">
+            <p lang="en">How hard can it be? Just do it! And again! And again!</p>
+          </blockquote>
         </div>
       </div>
     </section>
